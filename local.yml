@@ -12,7 +12,7 @@
       name: nginx
 
   - name: Install VLC
-      apt:
+    apt:
         name: vlc
         state: present
         update_cache: yes

@@ -6,3 +6,7 @@
   - name: Install htop
     apt:
       name: htop
+  tasks:
+  - name:  Install nginx
+    apt:
+      name: nginx

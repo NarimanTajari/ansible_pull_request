@@ -21,3 +21,7 @@
         name: vlc
         state: present
         update_cache: yes
+  - name: Install PostgreSQL
+    apt:
+        name: postgresql
+        state: present

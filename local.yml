@@ -11,6 +11,11 @@
     apt:
       name: nginx
 
+  tasks:
+  - name: Install apache
+    apt:
+      name: nginx
+
   - name: Install VLC
     apt:
         name: vlc

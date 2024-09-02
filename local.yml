@@ -3,4 +3,4 @@
 
   tasks:
     - name: echo a message
-      debug: msg="this is working"
+      debug: msg="this is working, that's fine"

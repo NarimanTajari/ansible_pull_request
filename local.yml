@@ -1,21 +1,6 @@
----
-- hosts: localhost
-  
-  
+- name: testing ansible
+  hosts: localhost
+
   tasks:
-    - name: Download VLC installer
-      win_get_url:
-        url: https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.exe
-        dest: C:\temp\vlc-installer.exe
-
-    - name: Install VLC
-      win_package:
-        path: C:\temp\vlc-installer.exe
-        product_id: VLC media player
-        arguments: /L=1033 /S
-        state: present
-
-    - name: Remove VLC installer
-      win_file:
-        path: C:\temp\vlc-installer.exe
-        state: absent
+    - name: echo a message
+      debug: msg="this is working"

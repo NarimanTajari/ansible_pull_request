@@ -1,27 +1,6 @@
-- hosts: localhost
-  connection: local
-  become: true 
-
-  tasks: 
-  - name: Install htop
-    apt:
-      name: htop
-  tasks:
-  - name:  Install nginx
-    apt:
-      name: nginx
+- name: testing ansible
+  hosts: localhost
 
   tasks:
-  - name: Install apache
-    apt:
-      name: nginx
-
-  - name: Install VLC
-    apt:
-        name: vlc
-        state: present
-        update_cache: yes
-  - name: Install PostgreSQL
-    apt:
-        name: postgresql
-        state: present
+    - name: echo a message
+      debug: msg="this is working"

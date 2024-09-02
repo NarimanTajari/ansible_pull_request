@@ -1,5 +1,5 @@
 - name: Install VLC on Windows Server
-  hosts: localhost
+  hosts: windows
   tasks:
     - name: Download VLC installer
       win_get_url:

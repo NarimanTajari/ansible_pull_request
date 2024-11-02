@@ -1,0 +1,28 @@
+---
+- hosts: all
+  gather_facts: no
+  vars:
+    myvar: "1. Variable from playbook vars"
+  vars_files:
+    - vars/vars1.yml
+    - vars/vars2.yml
+  
+  tasks:
+    - name: Print initial variable
+      debug:
+        msg: "Initial myvar is: {{ myvar }}"
+
+    - name: Include vars/main.yml
+      include_vars:
+        file: vars/main.yml
+
+    - name: Print after vars/main.yml
+      debug:
+        msg: "After vars/main.yml myvar is: {{ myvar }}"
+
+    - name: Include tasks from main.yml
+      include_tasks: tasks/main.yml
+
+    - name: Print final variable
+      debug:
+        msg: "Final myvar is: {{ myvar }}"

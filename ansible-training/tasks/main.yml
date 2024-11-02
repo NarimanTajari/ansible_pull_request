@@ -1,0 +1,12 @@
+---
+- name: Print variable before set_fact
+  debug:
+    msg: "Before set_fact myvar is: {{ myvar }}"
+
+- name: Set variable in tasks
+  set_fact:
+    myvar: "5. Variable from tasks/main.yml"
+
+- name: Print variable after set_fact
+  debug:
+    msg: "After set_fact myvar is: {{ myvar }}"
